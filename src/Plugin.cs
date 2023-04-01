@@ -17,7 +17,7 @@ using static AbstractPhysicalObject;
 using static CreatureTemplate.Type;
 using static MoreSlugcats.MoreSlugcatsEnums.CreatureTemplateType;
 
-[BepInPlugin("com.dual.barrel-of-scavs", "Barrel of Scavs", "1.0.1")]
+[BepInPlugin("com.dual.barrel-of-scavs", "Barrel of Scavs", "1.0.2")]
 sealed class Plugin : BaseUnityPlugin
 {
     sealed class ObjData { public WorldCoordinate startPos; }
@@ -33,7 +33,7 @@ sealed class Plugin : BaseUnityPlugin
         }
 
         var ty = self.creatureTemplate.TopAncestor().type;
-        if (ty == Fly || ty == Centipede || ty == EggBug || ty == Leech) {
+        if (ty == Fly || ty == EggBug || ty == Leech || self.creatureTemplate.type == SmallCentipede) {
             return false;
         }
         if (ty == Slugcat || ty == PoleMimic || ty == TentaclePlant || ty == MirosBird || ty == Vulture || (ty == SlugNPC && SlugNPC != null)) {
