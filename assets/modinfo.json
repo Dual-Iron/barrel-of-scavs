@@ -1,11 +1,13 @@
 ﻿{
   "id": "barrel-of-scavs",
-  "name": "Barrel of Scavs",
-  "version": "1.0.0",
+  "name": "Don't drag me into this!",
+  "version": "1.0.1",
   "authors": "Dual",
   "target_game_version": "v1.9",
-  "description": "Makes creature dens slightly more forgiving.<LINE><LINE>- Prey cannot drag predators into dens, so baby centipedes can't accidentally eat you.<LINE>- Creatures drop everything when they are dragged into dens, so a kelp monster eating your lizard captor will free you instead of eating you too.<LINE><LINE>Code at github.com/Dual-Iron/barrel-of-scavs",
-  "tags": [],
+  "description": "Makes pipes slightly less annoying.<LINE><LINE>- Corpses and prey can't drag you into pipes or dens. No more being eaten by baby centipedes.<LINE>- Creatures drop everything when dragged into a den. For example, when eaten by a pole mimic, scavengers drop their items and lizards drop their prey.<LINE><LINE>Art by Maedae#1029 at twitter.com/GarbageWastes<LINE>Code at github.com/Dual-Iron/barrel-of-scavs",
+  "tags": [
+    "Accessibility"
+  ],
   "requirements": [],
   "requirements_names": [],
   "checksum_override_version": false
