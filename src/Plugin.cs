@@ -15,6 +15,7 @@ namespace ScavBarrel;
 
 using static AbstractPhysicalObject;
 using static CreatureTemplate.Type;
+using static MoreSlugcats.MoreSlugcatsEnums.CreatureTemplateType;
 
 [BepInPlugin("com.dual.barrel-of-scavs", "Barrel of Scavs", "1.0.1")]
 sealed class Plugin : BaseUnityPlugin
@@ -35,10 +36,10 @@ sealed class Plugin : BaseUnityPlugin
         if (ty == Fly || ty == Centipede || ty == EggBug || ty == Leech) {
             return false;
         }
-        if (ty == PoleMimic || ty == TentaclePlant || ty == MirosBird || ty == Vulture) {
+        if (ty == Slugcat || ty == PoleMimic || ty == TentaclePlant || ty == MirosBird || ty == Vulture || (ty == SlugNPC && SlugNPC != null)) {
             return true;
         }
-        return self.creatureTemplate.CreatureRelationship(other.creatureTemplate).type == CreatureTemplate.Relationship.Type.Eats;
+        return ty == other.creatureTemplate.TopAncestor().type || self.creatureTemplate.CreatureRelationship(other.creatureTemplate).type == CreatureTemplate.Relationship.Type.Eats;
     }
 
     static void DropEverything(AbstractCreature crit)
